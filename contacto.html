@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Gbeer contacto</title>
+  <script src="https://kit.fontawesome.com/e15e8c34af.js" crossorigin="anonymous"></script>
+  <link rel="icon" type="image/png" href="img/gb.ico">
+   <link rel="stylesheet" href="css/estilo.css">
+  <script src="https://kit.fontawesome.com/7e5b2d153f.js" crossorigin="anonymous"></script>
+  <script defer src="js/index.js"></script>
+  <style>
+    body{
+      background-image: url('img/fondo.png'); }
+</style>
+</head>
+
+<body>
+   <header id="idheader" class="header">
+   </header>
+
+
+   <div style="display:inline-block;vertical-align:top;">
+    <img src="img/BD_vaso.png" width="300" height="500" alt="img"  />
+    </div>
+  <div id="contacto" style="display:inline-block;">
+          <p> <h1>Sacate las Dudas...</h1>
+           <br><br><br>
+            </p>
+	     <div id="contacto"  >
+            <div class="formulario">
+                <h2>Completa el formulario ....</h2>
+                <form name="fvalida" >
+                    <br><br>
+                 <table>    
+
+                    <label >Nombre:</label>
+                    <input type="text"  name="nombre" size="30" maxlength="100" placeholder="Ingresa tu Nombre.."  ><br>
+                       <br>                
+                    <label >Apellido:</label>
+                    <input type="text" id="apellido" name="lastname"  placeholder="Ingresa tu Apellido.."><br>                    
+                    <br>                  
+                    <label for="mail">E-mail:    </label>
+                    <input type="email"  name="email" ><br>
+                    <br>  
+                    <label>Edad:   </label>
+                    <input type="text" name="edad" size="3" maxlength="2"><br>
+                    <br>                
+                    
+                    <label>Estilo Favorito:</label>
+                  
+                        <select name=estilo>
+                            <option value="Elegir">Elegir
+                            <option value="blonde">Blonde
+                            <option value="honey">Honey
+                            <option value="folk">Folk
+                            <option value="ipa">IPA
+                            <option value="bitter">Bitter    
+                        </select>
+                     
+                     <br> <br>
+                    <p>Comentarios:</p>
+                    <textarea name="comentario" rows="5" cols="40"  ></textarea>
+        
+                    <input type="submit" value="Enviar"  onclick="validar_contacto()">
+                    <br> 
+                    <br><br><br><br>                                      
+                    <br>
+                  </table>  
+                </form> 
+                
+            </div>
+            
+        
+            
+            
+            
+                                                                                        
+            
+        
+        </div>
+  </div>
+  
+  <footer id="idfooter">
+  </footer>
+  <script src="js/script.js"></script>
+</body>
+
+
+</html>

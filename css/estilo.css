@@ -1,0 +1,389 @@
+*{
+    margin:0;
+    box-sizing: border-box;
+    
+}
+
+   
+
+
+body{
+    
+    font-family: sans-serif;
+    padding: 90px 20px 0;
+   /* background-image: url('img/fondo.png'); */
+    
+}
+
+
+h1{
+    font-family: 'Tiro Kannada', serif;
+    color: rgb(54, 54, 3);
+}
+
+
+.compartir{
+    display: flex;
+    color: white;
+    font-family: 'Dancing Script', cursive;
+    font-size: 50px;
+    text-align: center;
+    
+}
+
+
+.header {
+    background-color: black;
+    height: 80px;
+    position: fixed;
+    width: 100%;
+    top:0;
+    left: 0;
+    box-shadow: 0 4px 5px rgb(167, 167, 82);
+
+}
+.nav {
+    display: flex;
+    justify-content: space-between;
+    max-width: 922px;
+    margin: 0 auto;
+}
+
+.nav-link{
+ color:white ;
+ text-decoration: none;
+
+}
+
+.logo
+{
+    font-size: 30px;
+    font-weight: bold;
+    padding: 0 40px;
+    line-height: 80px;
+}
+
+.nav-menu {
+    display: flex;
+    margin-right: 40 px ;
+    list-style: none;
+     }
+.nav-menu-item{
+    font-size: 18 px;
+    margin: 0 10px;
+    line-height: 80px;
+    text-transform: uppercase;
+    width: max-content;
+    }
+
+    .nav-menu-link {
+        padding: 8px 12px;
+        border-radius: 5px;
+        transition: 0.5s;
+    }
+    .nav-menu-link:hover,
+    .nav-menu-link_active {
+        background-color: lightseagreen;
+        transition: 0.5s;
+    }
+
+
+   .nav-toggle{
+     color: linen;
+      background: none;
+      border: none;
+      font-size: 30px;
+      padding: 0 20px;
+      line-height: 60px;
+      cursor: pointer;
+
+      display: none;
+
+   }
+
+
+   #idfooter {
+    background-color: black;
+    color: white;
+    text-align: center;
+    font-size: 12px;
+    padding: 15px;
+    width: 100%;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    /*padding: 20px;*/
+    height: 75px;
+    margin-top: 0; /*10px;*/
+    
+  }
+
+@media (max-width:768px){       
+body{
+        padding-top: 70px  ;
+      /*  background-image: url('img/fondo.png'); */
+}
+
+.header {
+    height: 80px;
+            
+}
+
+.logo
+{
+    font-size: 25px;
+    font-weight: bold;
+    padding: 0 20px;
+    line-height: 60px;
+}
+
+.nav-menu {
+    flex-direction: column;
+    align-items: center;
+    margin-right: 20 px ;
+    background-color: darkslategray;
+    position: fixed;
+    left: 0;
+    top: 60px;
+    width: 100%;
+    padding: 20px 0;
+
+    height: calc(100% - 60px);
+    overflow-y: auto;
+
+    left:100% ;
+    transition: left 0.3s ;
+     }
+.nav-menu-item{
+    line-height: 70px;
+    }
+ .nav-menu-link_active,   
+ .nav-menu-link:hover{
+     background: none;
+     color: lightseagreen;
+    }
+ .nav-toggle{
+     display: block;
+ }
+
+ .nav-menu_visible{
+     left: 0;    
+
+ }
+
+ .nav-toggle:focus:not(:focus-visible){
+     outline: none;
+ }
+ }
+/****************/
+video {
+    max-width: 100%;
+    height: auto;
+  }
+
+ /*********************/
+         
+ 
+ /**********************/
+ 
+ 
+
+.contenedor{
+    width: 90%;
+    max-width: 1000px; /*ancho máximo de la página*/
+    margin: 20px auto; /*auto permite centrar nuestra página en forma horizontal*/
+    display: grid;
+    grid-gap: 20px; /*nos ahorramos tenes que poner márgenes entre los elementos*/
+
+    /*3 columnas: contenido (con 2 widgets) + sidebar*/
+    grid-template-columns: repeat(3,1fr);
+
+    /*4 filas: header, contenido, widgets, footer*/
+    grid-template-rows: repeat(4, auto);
+
+    grid-template-areas: "encabezado encabezado encabezado"
+                         "contenido contenido  sidebar"
+                         "contenido contenido   sidebar"
+                         "widget-1  widget-2  . "
+                         "pie pie pie";
+}
+
+.contenedor > div,
+.contenedor .header,
+.contenedor .contenido,
+.contenedor .sidebar,
+.contenedor .pie {
+    padding: 20px;
+    border-radius: 4px;
+}
+
+.contenedor .header{
+     grid-area: encabezado; 
+}
+
+.contenedor .contenido{
+    /*background: #fff;*/
+    grid-area: contenido; 
+    /*background-image: url('img/fondo.png'); */
+}
+
+.contenedor .sidebar{
+    /*background: orange;
+    /*utilizamos flexbox para alinear el contenido*/
+    display: flex;
+    align-items: left;
+    justify-content: center;
+    grid-area: sidebar; 
+ 
+        background-color: none;
+        padding: 15px;
+        color: #ffffff;
+        text-align: center;
+        font-size: 14px;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+      
+
+
+
+    
+}
+
+.contenedor .widget-1,
+.contenedor .widget-2{
+    /*background: lightskyblue;*/
+    color: #000;
+    height: 200px;
+    /*utilizamos flexbox para alinear el contenido*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    
+        background-color:none;
+        padding: 30px;
+        color: #ffffff;
+        text-align: center;        
+        box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+        min-width: 100px ;
+ 
+ 
+
+
+
+
+}
+
+.contenedor .widget-1{
+    grid-area: widget-1; 
+}
+
+.contenedor .widget-2{
+    grid-area: widget-2; 
+}
+
+.contenedor .pie{
+    grid-area: pie; 
+}
+
+@media screen and (max-width: 768px){
+    .contenedor{
+        grid-template-areas: "header header header"
+                             "contenido contenido contenido"                                                                               
+                             "widget-1 widget-1 widget-1"
+                             "widget-2 widget-2 widget-2"
+                             "sidebar sidebar sidebar"
+                             "pie pie pie";
+    }
+}
+
+@media screen and (max-width: 450px){
+    .contenedor{
+        grid-template-areas: "header header header"
+                             "contenido contenido contenido"
+                             "widget-1 widget-1 widget-1"
+                             "widget-2 widget-2 widget-2"
+                             "sidebar sidebar sidebar"
+                             "pie pie pie";
+    }
+}
+
+
+
+/**********cervezas *****************/
+
+
+
+  
+div.desc {
+  padding: 15px;
+  text-align: center;
+}
+
+div.gallery:hover {
+    box-shadow: 0 4px 5px rgb(167, 167, 82);
+  }
+  
+ 
+
+/******animacion*********/
+
+*************/
+  .animacion {
+     
+    width: 200px;
+    height: 200px;
+    background-color: none;
+    animation-name: example;
+    animation-duration: 10s;
+    /*animation-iteration-count: infinite;*/
+   }
+
+    .animacion:hover {
+    width: 300px;
+    height: 300px;
+    transition: width 2s, height 2s, transform 2s;
+    transform: rotate(360deg);
+   }
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
